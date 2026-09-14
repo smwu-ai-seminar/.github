@@ -17,10 +17,11 @@
 | 강의계획서 확인 | [**hands-on** → `docs/syllabus-2026-fall.md`](https://github.com/smwu-ai-seminar/hands-on/blob/main/docs/syllabus-2026-fall.md) |
 | 읽은 것 · 만든 것 정리해서 올리기 | [**wiki**](https://github.com/smwu-ai-seminar/wiki) |
 | 다른 수강생이 정리한 내용 찾아보기 | [**wiki**](https://github.com/smwu-ai-seminar/wiki) 또는 조교 봇에게 질문 |
+| 주제 하나로 출처 달린 리포트 뽑기 | [**GPT-Researcher**](https://github.com/smwu-ai-seminar/GPT-Researcher) |
 | 조교 봇(MissingTA)이 어떻게 만들어졌는지 보기 | [**MissingTA**](https://github.com/smwu-ai-seminar/MissingTA) |
 
 > **저장소를 눌렀는데 404가 뜨나요?**
-> 세 저장소 모두 **비공개**입니다. 이메일로 받은 **조직 초대를 먼저 수락**해야 보입니다.
+> 아래 저장소는 모두 **비공개**입니다. 이메일로 받은 **조직 초대를 먼저 수락**해야 보입니다.
 > 초대를 못 받았거나 만료됐다면 교수/조교에게 GitHub 아이디를 알려주세요.
 
 ---
@@ -57,6 +58,20 @@
 
 > ⚠️ `raw/` 에 올린 원문은 자동 처리 봇이 **외부 API 로 전송**합니다.
 > 원치 않는 파일은 frontmatter 에 `auto_ingest: false` 한 줄을 넣으면 건너뜁니다.
+
+### [GPT-Researcher](https://github.com/smwu-ai-seminar/GPT-Researcher) — 리서치 도구
+연구 주제를 한 줄 넣으면 알아서 웹을 뒤지고 **출처가 달린 리포트**를 써 주는 도구입니다.
+
+```
+주제 입력  →  검색  →  본문 수집  →  요약·정리  →  outputs/ 에 .md .pdf .docx
+```
+
+- 파이썬도 가상환경도 필요 없습니다. **Docker Desktop 하나만** 설치하면 됩니다.
+- 저장소를 받고 `.env` 에 키를 채운 뒤 `docker compose up --build -d` → <http://localhost:8000>
+- 리포트는 **한국어가 기본**이고, `my-docs/` 에 내 PDF·docx 를 넣으면 웹 대신 그 문서를 근거로 씁니다.
+- 잘 안 되면 먼저 `docker compose exec gpt-researcher python tools/check_config.py` — 무엇이 틀렸는지 한국어로 알려줍니다.
+
+설치 준비물부터 증상별 대처까지 [README](https://github.com/smwu-ai-seminar/GPT-Researcher/blob/main/README.md) 에 순서대로 정리되어 있습니다.
 
 ### [MissingTA](https://github.com/smwu-ai-seminar/MissingTA) — 수업 조교 봇
 강의 자료와 공동 위키를 읽고 답하는 **AIN Teams 에이전트**의 소스 코드입니다.
