@@ -2,7 +2,11 @@
 
 숙명여자대학교 · 2026학년도 2학기
 [The Missing Semester of Your CS Education](https://missing.csail.mit.edu/) 2026 개정판을 바탕으로,
-**AI 코딩 도구를 실제로 써서 만들어 보는** 수업입니다.
+**AI 를 써서 각자의 연구에 쓰는 도구와 워크플로를 직접 개선해 보는** 수업입니다.
+
+만드는 것은 남에게 팔 제품이 아니라 **내 연구가 실제로 굴러가게 하는 도구**입니다.
+읽고 · 정리하고 · 실험하고 · 다시 쓰는 과정에서 손이 많이 가는 지점을 찾아,
+AI 도구로 그 지점을 줄이는 것이 이 수업의 목표입니다.
 
 이 페이지는 **"지금 어느 저장소로 가야 하는지"** 를 알려주는 안내판입니다.
 
@@ -42,7 +46,7 @@
 | 도구 | 실행 명령 | 사용 시점 |
 |---|---|---|
 | OpenCode | `opencode` | 6~7주차 |
-| Claude Code | `claude` | 9주차 이후 Product 개발 |
+| Claude Code | `claude` | 9주차 이후 내 연구 워크플로 개선 |
 
 자세한 절차와 문제 해결은 [`docs/STUDENT-GUIDE.md`](https://github.com/smwu-ai-seminar/hands-on/blob/main/docs/STUDENT-GUIDE.md) 에 있습니다. **열어놓고 따라 하세요.**
 
@@ -61,6 +65,8 @@
 
 ### [GPT-Researcher](https://github.com/smwu-ai-seminar/GPT-Researcher) — 리서치 도구
 연구 주제를 한 줄 넣으면 알아서 웹을 뒤지고 **출처가 달린 리포트**를 써 주는 도구입니다.
+**자료 조사** 단계를 AI 에게 넘겨 보는 첫 번째 도구입니다 — 그대로 쓰기보다,
+내 연구에 맞게 고쳐 쓸 곳을 찾아보세요.
 
 ```
 주제 입력  →  검색  →  본문 수집  →  요약·정리  →  outputs/ 에 .md .pdf .docx
